@@ -20,11 +20,13 @@ ENTRY = (
     "whose quiet presence finally makes them work."
 )
 
+OUTPUT_FILENAME = "entry.txt"
+
 
 def main():
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
-    with open(os.path.join(out_dir, "entry.txt"), "w", encoding="utf-8") as f:
+    with open(os.path.join(out_dir, OUTPUT_FILENAME), "w", encoding="utf-8") as f:
         f.write(ENTRY)
 
 
